@@ -1,4 +1,4 @@
-from odoo.tests import common 
+from odoo.tests import common
 
 
 class TestKeda(common.TransactionCase):

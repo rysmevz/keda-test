@@ -18,3 +18,11 @@ class ResMaterial(models.Model):
     def _check_buy_price(self):
         if self.buy_price < 100:
             raise ValidationError(_('Buy price cannot be greater than 100'))
+    
+    @api.constrains('code')
+    def _check_code(self):
+        self.ensure_one()
+        domain = [('code', '=ilike', self.code), ('id', '!=', self.id)]
+        rec = self.search(domain)
+        if rec:
+            raise ValidationError('Code already exists!')
