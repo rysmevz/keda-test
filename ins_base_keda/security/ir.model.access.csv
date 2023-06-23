@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_material_all,res_material all,ins_base_keda.model_res_material,,1,1,1,1
+access_res_supplier_all,res_supplier all,ins_base_keda.model_res_supplier,,1,1,1,1

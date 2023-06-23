@@ -1,0 +1,54 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="res_material_form_view">
+            <field name="name">res.material.form.view</field>
+            <field name="model">res.material</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="material_type"/>
+                            <field name="buy_price"/>
+                            <field name="supplier_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="res_material_tree_view">
+            <field name="name">res.material.tree.view</field>
+            <field name="model">res.material</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="material_type"/>
+                    <field name="buy_price"/>
+                    <field name="supplier_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="res_material_filter_view">
+            <field name="name">res.material.filter.view</field>
+            <field name="model">res.material</field>
+            <field name="arch" type="xml">
+                <filter>
+                    <field name="material_type"/>
+                </filter>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="res_material_action">
+            <field name="name">Material</field>
+            <field name="res_model">res.material</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        
+    </data>
+</odoo>

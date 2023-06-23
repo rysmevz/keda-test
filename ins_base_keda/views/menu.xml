@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <menuitem
+            id="menu_keda_root"
+            name="Keda Test"
+            web_icon="ins_base_keda,static/description/icon.png"
+        />
+        <menuitem
+                id="menu_res_supplier_root"
+                name="Supplier"
+                sequence="1"
+                parent="menu_keda_root"
+                action="res_supplier_action"
+            />
+        <menuitem
+                id="menu_res_material_root"
+                name="Material"
+                sequence="2"
+                parent="menu_keda_root"
+                action="res_material_action"
+            />
+    </data>
+</odoo>
